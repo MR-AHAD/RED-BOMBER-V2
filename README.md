@@ -13,4 +13,6 @@
 ### 🔧 ইনস্টলেশন
 1. রিপোজিটরিটি ক্লোন করুন:
    ```bash
-   git clone https://github.com/MR-AHAD/RED-BOMBER-V2.git
+
+
+   https://mr-ahad.github.io/RED-BOMBER-V2/
