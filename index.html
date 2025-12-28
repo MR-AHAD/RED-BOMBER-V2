@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX BOMBER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+<script src="protected_1766949634927.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Access Key Container -->
+    <div class="access-container" id="accessContainer">
+        <div class="logo-section">
+            <img src="https://i.ibb.co.com/xMDcGTp/20241015-173222.jpg" alt="Logo">
+        </div>
+        <h2 class="access-title">Login Required</h2>
+        <div class="linear-progress"></div>
+        <form class="access-form" id="accessForm">
+            <div class="input-group">
+                <label for="loginInput">Enter Password</label>
+                <input type="password" id="loginInput" placeholder="Enter Your Password" required>
+                <span class="password-toggle" id="passwordToggle"><i class="fas fa-eye-slash"></i></span>
+            </div>
+            <button type="submit" class="access-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container hidden" id="mainContainer">
+        <header>
+            <div class="logo-section">
+                <img src="https://i.ibb.co.com/xMDcGTp/20241015-173222.jpg" alt="Logo">
+            </div>
+            <h1 class="title">EX BOMBER</h1>
+            <div class="linear-progress"></div>
+        </header>
+
+        <main>
+            <form class="input-form" id="smsForm">
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="limit">Limit</label>
+                    <input type="number" id="limit" placeholder="Set Your Limit" required>
+                </div>
+
+                <div id="loadingSpinner" class="loading-spinner"></div>
+                <div id="statusMessage" class="status-message"></div>
+
+                <div class="button-container">
+                    <button type="button" class="btn start" id="startBtn">Start</button>
+                    <button type="button" class="btn stop" id="stopBtn" disabled>Stop</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>Developed by <span class="developer">Ahad Chowdhury</span></p>
+        <div class="linear-progress"></div>
+    </footer>
+
+    
+        <script src="protected_1766949712627.js"></script>
+    
+
+    <!-- Service Worker for Background SMS Sending -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(
+                    function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    },
+                    function(err) {
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                );
+            });
+        }
+    </script>
+</body>
+</html>
